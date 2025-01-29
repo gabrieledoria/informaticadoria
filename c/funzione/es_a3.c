@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int somma_divisori(int x)
+int somma_divisori(int x);
 
 int main()
 
@@ -13,6 +13,7 @@ int main()
 }
 
 int somma_divisori (int x);
+
 {
     int somma= 0;
     printf("\n\tDivisori di %d : ", x);
