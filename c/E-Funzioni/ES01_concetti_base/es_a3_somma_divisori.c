@@ -6,7 +6,7 @@ int main()
 
 {
     int num1, totale;
-    prinf("\n\tInserisci un numero:  ");
+    printf("\n\tInserisci un numero:  ");
     scanf("%d", &num1);
     totale = somma_divisori(num1);
 }
