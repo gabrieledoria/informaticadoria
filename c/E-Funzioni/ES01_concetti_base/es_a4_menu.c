@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 // Definizione dei codici ANSI per il colore del testo
 #define RESET       "\033[0m"
 #define BOLD        "\033[1m"
@@ -25,6 +24,8 @@
 
 // Definizione per cancellare lo schermo
 #define CLEAR_SCREEN "\033[2J"
+
+
 
 // Prototipi delle funzioni
 float area_rettangolo(float base, float altezza);
@@ -80,10 +81,10 @@ int main()
 }
 int menu()
 {
-    printf(CLEAR_SCREEN);
+   
     printf(RED "\n--- MENU ---\n" RESET);
-    printf("1. area_rettangolo 1\n");
-    printf("2. mcd 2\n");
+    printf("1. area_rettangolo \n");
+    printf("2. mcd \n");
     printf("3. somma_divisori\n");
     printf("4. esci\n");
 
