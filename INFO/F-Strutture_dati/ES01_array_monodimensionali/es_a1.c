@@ -15,13 +15,13 @@ int main()
     int numeri[10];
 
 
-    //Iniziali
+    //Inizializzo
     for (int i = 0; i < 10; i++)
     {
         numeri[i] = i + 1;
     }
 
-    //sTAMPO
+    //STAMPO
     for (int i = 0; i < 10; i++)
     {
         printf("\t%d", numeri[i]);
