@@ -12,22 +12,31 @@ Doria
 
 int main()
 {
-    //Dichiaro il vettore di 10 elemenmti
+    // Dichiaro il vettore di 10 elementi
     int numeri[10];
+    int somma = 0;
+    float media;
 
-
-    //Iniziali
+    // Riempio il vettore con i numeri da 1 a 10
     for (int i = 0; i < 10; i++)
     {
         numeri[i] = i + 1;
+        somma += numeri[i]; // Sommo ogni elemento
     }
 
-    //sTAMPO
+    // Stampo gli elementi del vettore
+    printf("Elementi del vettore:\n");
     for (int i = 0; i < 10; i++)
     {
         printf("\t%d", numeri[i]);
     }
 
-    printf("\n");
+    // Calcolo e visualizzo la somma degli elementi
+    printf("\nSomma degli elementi: %d\n", somma);
+
+    // Calcolo e visualizzo la media aritmetica degli elementi
+    media = somma / 10.0; // Divido per 10.0 per ottenere la media come numero decimale
+    printf("Media aritmetica degli elementi: %.2f\n", media);
+
     return 0;
 }
