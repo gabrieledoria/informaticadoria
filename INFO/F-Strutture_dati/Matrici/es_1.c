@@ -1,40 +1,41 @@
 #include <stdio.h>
 #define RC 5
 
-void carica_matrice(char matrice[][RC]);
-void stampa_matrice(char matrice[][RC]);
+void inizializzaMatrice(char matrice[][RC]);
+void stampaMatrice(char matrice[][RC]);
 
-int main()
-{
-    char matrice[RC][RC];
-    carica_matrice(matrice);  
-    stampa_matrice(matrice);  
+int main() {
+    char campo[RC][RC];
+
+    inizializzaMatrice(campo);
+    stampaMatrice(campo);
+
     return 0;
 }
 
-void carica_matrice(char matrice[][RC])
-{
-    
-    printf("Inserisci i valori per la matrice (5x5):\n");
-    for (int i = 0; i < RC; i++)
-    {
-        for (int j = 0; j < RC; j++)
-        {
-            printf("Elemento [%d][%d]: ", i, j);
-            scanf(" %c", &matrice[i][j]);
+void inizializzaMatrice(char matrice[][RC]) {
+    int i, j;
+
+    for (i = 0; i < RC; i++) {
+        for (j = 0; j < RC; j++) {
+            matrice[i][j] = '~';  // Acqua
         }
     }
 }
 
-void stampa_matrice(char matrice[][RC])
-{
-    // Print the matrix
-    printf("Matrice inserita:\n");
-    for (int i = 0; i < RC; i++)
-    {
-        for (int j = 0; j < RC; j++)
-        {
-            printf("%c\t", matrice[i][j]);  
+void stampaMatrice(char matrice[][RC]) {
+    int i, j;
+
+    printf("   ");
+    for (j = 0; j < RC; j++) {
+        printf("%d ", j); // intestazione colonne
+    }
+    printf("\n");
+
+    for (i = 0; i < RC; i++) {
+        printf("%d  ", i); // intestazione righe
+        for (j = 0; j < RC; j++) {
+            printf("%c ", matrice[i][j]);
         }
         printf("\n");
     }
