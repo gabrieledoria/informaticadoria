@@ -18,7 +18,7 @@ void inizializzaMatrice(char matrice[][RC]) {
 
     for (i = 0; i < RC; i++) {
         for (j = 0; j < RC; j++) {
-            matrice[i][j] = '~';  // Acqua
+            matrice[i][j] = '~';  
         }
     }
 }
@@ -28,12 +28,12 @@ void stampaMatrice(char matrice[][RC]) {
 
     printf("   ");
     for (j = 0; j < RC; j++) {
-        printf("%d ", j); // intestazione colonne
+        printf("%d ", j); 
     }
     printf("\n");
 
     for (i = 0; i < RC; i++) {
-        printf("%d  ", i); // intestazione righe
+        printf("%d  ", i); 
         for (j = 0; j < RC; j++) {
             printf("%c ", matrice[i][j]);
         }
